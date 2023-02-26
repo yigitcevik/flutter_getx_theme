@@ -1,16 +1,12 @@
 # flutter_getx_theme
 
-A new Flutter project.
+Flutter change theme and saved with Getx and Get Storage.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+You need to install two packages for the project.
 
-A few resources to get you started if this is your first Flutter project:
+1) https://pub.dev/packages/get
+2) https://pub.dev/packages/get_storage
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+I used the GetX package to provide the theme change and the GetStorage package to save the changed theme to the device. Just press the FloatingActionButton to change the theme.
