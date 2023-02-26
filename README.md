@@ -1,6 +1,4 @@
-# flutter_getx_theme
-
-Flutter change app theme and saved with Getx and Get Storage.
+# Flutter Change and Save App Theme With Getx and Get Storage
 
 ## Getting Started
 
