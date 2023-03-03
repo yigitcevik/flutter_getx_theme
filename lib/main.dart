@@ -8,8 +8,14 @@ void main() async {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   ThemeController themeController = ThemeController();
 
   @override
@@ -20,11 +26,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       themeMode: themeController.getTheme(),
-      home: Home(),
+      home: home(),
     );
   }
 
-  Scaffold Home() {
+  Scaffold home() {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Material App Bar'),
@@ -34,9 +40,13 @@ class MyApp extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          themeController.changeTheme();
+          setState(() {
+            themeController.changeTheme();
+          });
         },
-        child: Icon(Icons.light_mode),
+        child: themeController.isDark()
+            ? const Icon(Icons.light_mode)
+            : const Icon(Icons.dark_mode),
       ),
     );
   }
